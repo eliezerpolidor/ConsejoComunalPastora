@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 25vw 0 0 0;
+}
+
+.menu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.img1 {
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+}
+
+.imgPastora {
+    width: 100%;
+    height: 15vw;
+
+}
+
+.img2 {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 45vw;
+    opacity: 0.56;
+}
+
+.ojosChavez {
+    border-radius: 20%;
+    width: 100%;
+    height: 6vw;
+}
+
+.texto {
+    position: absolute;
+    top: 5vw;
+    left: 10vw;
+    font-size: 3vw;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+.nav {
+    width: 100%;
+    height: 6vw;
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    box-shadow: 0 0 2vw 0 rgba(83, 14, 14, 0.8);
+}
+
+.ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.li a {
+    color: aliceblue;
+    line-height: 6vw;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    margin: 0 0 0 2vw;
+}
+
+.li a:hover {
+    background: rgb(162, 27, 27);
+    padding: 1vw;
+    border-radius: 10%;
+    transition: 0.4s;
+}
+
+.animation {
+    animation-name: fadeInOut, moveLeft300px, bounce;
+    animation-duration: 15s, 15s, 10s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /*the previous script you can replace it with
+    animation: 335 infinite alternate slidein;*/
+    font-size: 1.5vw;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    75% {
+        font-size: 100%;
+        margin-left: 15%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.barranimada {
+    background: #2980B9;
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+    box-shadow: 0 0 2vw 0 #2980B9;
+    width: 100%;
+    height: 2.5vw;
+    margin: 20vw auto 0 auto;
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*MEDIA QUERY CUANDO ES UN MOVIL*/
+
+@media (max-width:992px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
